@@ -1,0 +1,40 @@
+* {
+    background: #fcfcfc;
+    padding: 0;
+    margin: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body {
+    margin: 1em;
+    text-align: center;
+}
+
+div {
+    display: block;
+}
+
+h2 {
+    margin: 1em;
+}
+
+.upload {
+    margin: 4em;
+}
+
+#upload-file, #upload-report {
+    padding: 1em 2em;
+}
+
+.upload input {
+    padding: .5em 1em;
+}
+
+button {
+    padding: .5em 1em;
+}
+
+button:hover {
+    cursor: pointer;
+    background: #ececec;
+}

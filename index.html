@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    
+    
+    <title>Physicals</title>
+</head>
+<body>
+    <div class="upload">
+        <h2>Import Track Roster</h2>
+        <p>(must be CSV file with "Last Name" and "First Name" columns)</p>
+        <input type="file" id="upload-file" accept=".csv">
+        <button id="upload-confirm">Upload Roster</button>
+        <p id="roster-switch">File not uploaded yet.</p>
+    </div>
+    
+    <div class="upload">
+        <h2>Import Clearance Report</h2>
+        <input type="file" id="upload-report" accept=".csv">
+        <button id="report-confirm">Upload Report</button>
+        <p id="report-switch">File not uploaded yet.</p>
+    </div>
+    
+    <div class="generate">
+        <h2>Generate Report</h2>
+        <button id="generate-button" onclick=getPhysical()>Generate Report</button>
+    </div>
+    
+
+    <div id="physical-list">
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.0/papaparse.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
