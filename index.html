@@ -12,7 +12,7 @@
 <body>
     <div class="upload">
         <h2>Import Track Roster</h2>
-        <p>(must be CSV file with "Last Name" and "First Name" columns)</p>
+        <p class="warning">(must be CSV file with "Last Name" and "First Name" columns)</p>
         <input type="file" id="upload-file" accept=".csv">
         <button id="upload-confirm">Upload Roster</button>
         <p id="roster-switch">File not uploaded yet.</p>
@@ -20,6 +20,7 @@
     
     <div class="upload">
         <h2>Import Clearance Report</h2>
+        <p class="warning">(must be CSV file)</p>
         <input type="file" id="upload-report" accept=".csv">
         <button id="report-confirm">Upload Report</button>
         <p id="report-switch">File not uploaded yet.</p>

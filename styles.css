@@ -18,6 +18,9 @@ h2 {
     margin: 1em;
 }
 
+.warning {
+    margin-top: 0;
+}
 .upload {
     margin: 4em;
 }
@@ -39,6 +42,7 @@ h2 {
 button {
     padding: .5em 1em;
     margin: .5em;
+    font-weight: 700;
 }
 
 button:hover {
