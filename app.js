@@ -23,6 +23,7 @@ const uploadConfirm = document.getElementById("upload-confirm").
         }
     });
     rosterSwitch.innerHTML = 'File Uploaded!'
+    rosterSwitch.style.background = 'rgb(37 159 67)'
     console.log(roster)
 });
 
@@ -43,6 +44,7 @@ const reportConfirm = document.getElementById("report-confirm").
         }
     });
     reportSwitch.innerHTML = 'File Uploaded!'
+    reportSwitch.style.background = 'rgb(37 159 67)'
     console.log(report)
 });
 
