@@ -5,7 +5,7 @@ const reportSwitch = document.getElementById('report-switch');
 // let list = document.createElement('p');
 let roster = [];
 let report = [];
-
+let needsPhysical = [];
 
 const uploadConfirm = document.getElementById("upload-confirm").
     addEventListener('click', () => {
@@ -54,12 +54,20 @@ function getPhysical() {
     for (let i=0; i<roster.length; i++) {
         let done = report.includes(roster[i]);
         if (done === false) {
+            needsPhysical.push(roster[i])
             let athlete = document.createElement('li');
             athlete.innerHTML = roster[i];
             physicalList.appendChild(athlete)
         }
     }
 }
+
+document.getElementById('word').onclick = function() {
+    const rows = [...needsPhysical];
+    let csvContent = "data:text/csv;charset=utf-8," 
+    + rows.map(e => e.join(",")).join("\n");
+    console.log(rows)
+};
 
 
 
