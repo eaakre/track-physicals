@@ -2,7 +2,6 @@ const physicalList = document.getElementById('physical-list');
 const rosterSwitch = document.getElementById('roster-switch');
 const reportSwitch = document.getElementById('report-switch');
 
-// let list = document.createElement('p');
 let roster = [];
 let report = [];
 let needsPhysical = [];
@@ -34,12 +33,17 @@ const reportConfirm = document.getElementById("report-confirm").
     Papa.parse(document.getElementById('upload-report').files[0],
     {
         download: true,
-        header: true,
+        header: false,
         skipEmptyLines: true,
         complete: function(results){
-            for (let i=5; i<results.data.length; i++) {
-                // report.push(results.data[i][""])
-                report.push(results.data[i][""])
+            for (let i=7; i < results.data.length; i++) {
+                let heading = {
+                    Season1: results.data[i][0],
+                    Grade1: results.data[i][1],
+                    Activity: results.data[i][2],
+                    Name: results.data[i][3],
+                };
+                report.push(heading['Name']);
             }
         }
     });
@@ -61,6 +65,18 @@ function getPhysical() {
         }
     }
 }
+
+document.getElementById('word').onclick = function() {
+    const rows = [...needsPhysical];
+    let csvContent = "data:text/csv;charset=utf-8," 
+    + rows.map(e => e.join(",")).join("\n");
+    console.log(rows)
+};
+
+
+
+
+
 
 document.getElementById('word').onclick = function() {
     const rows = [...needsPhysical];
